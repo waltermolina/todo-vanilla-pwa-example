@@ -70,7 +70,7 @@ Esta app se desarrolló para una demo especialmente organizada por Lamansys para
 
 Porque una imagen vale más que mil palabras:
 
-![Indicador de estado de Red (Online/Offline).]([https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d6fdbf1c-eec6-45a1-8ea8-a1bbbde443ef/Untitled.png](https://raw.githubusercontent.com/waltermolina/todo-vanilla-pwa-example/main/resources/networkStatus.png))
+![Indicador de estado de Red (Online/Offline).](https://raw.githubusercontent.com/waltermolina/todo-vanilla-pwa-example/main/resources/networkStatus.png)
 
 Indicador de estado de Red (Online/Offline).
 
