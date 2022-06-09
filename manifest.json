@@ -10,22 +10,22 @@
     "orientation": "portrait-primary",
     "icons": [
         {
-            "src": "/assets/icons/icon-192x192.png",
+            "src": "assets/icons/icon-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/assets/icons/icon-256x256.png",
+            "src": "assets/icons/icon-256x256.png",
             "sizes": "256x256",
             "type": "image/png"
         },
         {
-            "src": "/assets/icons/icon-384x384.png",
+            "src": "assets/icons/icon-384x384.png",
             "sizes": "384x384",
             "type": "image/png"
         },
         {
-            "src": "/assets/icons/icon-512x512.png",
+            "src": "assets/icons/icon-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
@@ -35,14 +35,14 @@
           "name": "Hi! I'm a shortcut",
           "short_name": "Shortcut 1",
           "description": "Just testing shortcuts",
-          "url": "/index.html",
+          "url": "index.html",
           "icons": []
         },
         {
             "name": "👋 Another shortcut",
             "short_name": "Shortcut 2",
             "description": "Just testing shortcuts",
-            "url": "/index.html",
+            "url": "index.html",
             "icons": []
         }
       ]
