@@ -1,8 +1,8 @@
 // array de recursos que queremos cachear
 const assets = [
-    "/index.html",
-    "/styles/styles.min.css",
-    "/js/app.js"
+    "index.html",
+    "styles/styles.min.css",
+    "js/app.js"
 ];
 
 // instalamos el service worker
