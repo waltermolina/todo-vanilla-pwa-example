@@ -131,7 +131,7 @@ const recuperarUbicacion = () => {
 //Método para registrar el service worker.
 const registerServiceWorker = () => {
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/serviceWorker.js')
+        navigator.serviceWorker.register('serviceWorker.js')
             .then(registration => {
                 console.log('😊 Service Worker Registered');
             })
