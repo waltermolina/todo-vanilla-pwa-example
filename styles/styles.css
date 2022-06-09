@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.button {
+  border-radius: 0.5rem;
+  background-color: transparent;
+  height: 3rem;
+  width: 3rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  border: 1px solid var(--foreground-alpha);
+  transition: 0.3s all;
+  cursor: pointer;
+  color: var(--foreground);
+}
+.button:hover {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  padding: 0 0.5rem;
+  color: var(--foreground);
+}
+
+.border-radius-4 {
+  border-radius: 0.5rem;
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  padding-top: 5rem;
+  transition: 0.6s all;
+  background: var(--background);
+}
+body.light {
+  --foreground: rgb(34, 34, 34);
+  --foreground-alpha: rgba(34, 34, 34, 0.8);
+  --background: rgb(238, 238, 238);
+  --background-alpha: rgba(238, 238, 238, 0.2);
+  color: var(--foreground);
+  background-color: var(--background);
+}
+body.dark {
+  --foreground: rgb(238, 238, 238);
+  --foreground-alpha: rgba(238, 238, 238, 0.2);
+  --background: rgb(34, 34, 34);
+  --background-alpha: rgba(34, 34, 34, 0.8);
+  color: var(--foreground);
+  background-color: var(--background);
+}
+body::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: var(--background);
+}
+body::-webkit-scrollbar-track {
+  background: var(--background);
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--foreground-alpha);
+  border-radius: 0.25rem;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground);
+}
+body hr,
+body main {
+  display: flex;
+  width: 32rem;
+  margin-bottom: 2rem;
+}
+body hr {
+  border: 2px solid var(--foreground-alpha);
+  margin: 1rem 0;
+}
+body main {
+  flex-direction: column;
+}
+body main form {
+  background-color: var(--background-alpha);
+  -webkit-backdrop-filter: blur(5px) saturate(150%);
+          backdrop-filter: blur(5px) saturate(150%);
+  border: 1px solid var(--foreground-alpha);
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5rem;
+}
+body main form input {
+  flex-grow: 2;
+  margin-right: 0.5rem;
+}
+
+#list {
+  list-style: "none";
+  margin: 0;
+  padding: 0;
+}
+#list li {
+  border: 1px solid var(--foreground-alpha);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+#list li input {
+  margin-right: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  border: 1px solid var(--foreground-alpha);
+  border-radius: 0;
+}
+#list li p {
+  flex-grow: 1;
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#list li input:checked + p {
+  text-decoration: line-through;
+}
+#list li button.button {
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+}
+
+#titleBar {
+  position: fixed;
+  z-index: 100;
+  left: env(titlebar-area-x, 0);
+  top: env(titlebar-area-y, 0);
+  width: env(titlebar-area-width, 100%);
+  height: env(titlebar-area-height, 33px);
+  box-sizing: border-box;
+  padding: 0 0rem 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.6s all;
+  -webkit-app-region: drag;
+}
+#titleBar > .no-drag {
+  -webkit-app-region: no-drag;
+}
+#titleBar > header {
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 0;
+  align-items: center;
+  transition: 0.3s all;
+}
+#titleBar > header > h1 {
+  margin: 0 8px 0 0;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s all;
+  color: var(--foreground);
+}
+#titleBar > header .status {
+  color: #fff;
+  height: 16px;
+  line-height: 16px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-size: 8px;
+  overflow: hidden;
+  padding: 0 8px;
+  transition: 0.6s all;
+}
+#titleBar > header .status.online {
+  background-color: forestgreen;
+}
+#titleBar > header .status.offline {
+  background: darkred;
+}
+#titleBar > header > img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+#titleBar > .title-bar-buttons {
+  background-color: var(--background);
+  display: flex;
+  border-bottom-left-radius: 0.5rem;
+  transition: 0.6s all;
+}
+#titleBar > .title-bar-buttons .title-bar-button {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  height: env(titlebar-area-height, 33px);
+  min-width: 48px;
+  line-height: env(titlebar-area-height, 33px);
+  font-size: 16px;
+  border: none;
+  margin: 0;
+}
+#titleBar > .title-bar-buttons .title-bar-button:hover {
+  background-color: var(--foreground-alpha);
+}
+#titleBar.no-overlay {
+  height: 4rem;
+  padding: 0 1rem;
+  background-color: var(--background-alpha);
+  border-bottom: 1px solid var(--foreground-alpha);
+  -webkit-backdrop-filter: blur(5px) saturate(150%);
+          backdrop-filter: blur(5px) saturate(150%);
+}
+#titleBar.no-overlay > header {
+  justify-content: space-between;
+}
+#titleBar.no-overlay > header > h1 {
+  font-size: 1.5rem;
+}
+#titleBar.no-overlay > header > .status {
+  height: 1.5rem;
+  line-height: 1.5rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  padding: 0 0.5rem;
+}
+#titleBar.no-overlay > .title-bar-buttons {
+  background: transparent;
+}
+#titleBar.no-overlay > .title-bar-buttons > .title-bar-button {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--foreground-alpha);
+  margin-left: 0.5rem;
+}
+#titleBar.mini > header > .status {
+  opacity: 0;
+}
+#titleBar.mini > .title-bar-buttons {
+  transform: translateY(-100%);
+}
+
+@media (max-width: 560px) {
+  body {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  body main {
+    width: 100%;
+  }
+}/*# sourceMappingURL=styles.css.map */
